@@ -1,0 +1,52 @@
+[
+	{
+		"id": "58df1e12-ad6f-42bb-a1be-5ed243f6bca4",
+		"timestamp": "",
+		"title": "The Very Best of the Doors 2CD",
+		"description": "Compact Disc",
+		"code": "58df1e12-ad6f-42bb-a1be-5ed243f6bca4",
+		"thumbnail": "https://m.media-amazon.com/images/I/91hrbype4aL._SY355_.jpg",
+		"price": "13.07",
+		"stock": 10
+	},
+	{
+		"id": "b9694179-ad04-4408-8a4d-5297f41861aa",
+		"timestamp": "",
+		"title": "Blood Sugar Sex Magik",
+		"description": "Compact Disc",
+		"code": "b9694179-ad04-4408-8a4d-5297f41861aa",
+		"thumbnail": "https://m.media-amazon.com/images/I/81hS2wgxbhL._SY355_.jpg",
+		"price": "9.99",
+		"stock": 8
+	},
+	{
+		"id": "d71601f9-1df4-4e2c-bef5-b4455775a59f",
+		"timestamp": "",
+		"title": "Pearl Jam Completely Unplugged Limited Edition",
+		"description": "Compact Disc",
+		"code": "d71601f9-1df4-4e2c-bef5-b4455775a59f",
+		"thumbnail": "https://m.media-amazon.com/images/I/81NDZb-JShL._SY355_.jpg",
+		"price": "49.77",
+		"stock": 5
+	},
+	{
+		"id": "083cbb62-c3ff-483b-a3fb-ffd8edf43cf7",
+		"timestamp": 1651466894596,
+		"title": "The Very Best of the Doors 2CD",
+		"description": "Compact Disc",
+		"code": "083cbb62-c3ff-483b-a3fb-ffd8edf43cf7",
+		"thumbnail": "https://m.media-amazon.com/images/I/91hrbype4aL._SY355_.jpg",
+		"price": "13.07",
+		"stock": 99
+	},
+	{
+		"id": "858ac1e2-1bbe-47bd-846e-dea13870a963",
+		"timestamp": 1651467206397,
+		"title": "The Very Best of the Doors 2CD2222",
+		"description": "Compact Disc",
+		"code": "858ac1e2-1bbe-47bd-846e-dea13870a963",
+		"thumbnail": "https://m.media-amazon.com/images/I/91hrbype4aL._SY355_.jpg",
+		"price": "13.07",
+		"stock": 9999
+	}
+]
