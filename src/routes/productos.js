@@ -3,6 +3,21 @@ const { ProductosController } = require('../controller/productos');
 
 const router = express.Router();
 
+const authMiddleware = (req, res, next) => {
+  console.log("Autenticando");
+
+  const isAdmin = true;
+
+  if (isAdmin) {
+    next()
+  } else {
+    res.status(401).json({
+      msg:"No autorizado"
+    })
+  }
+}
+
+
 router.get('/', async (req, res) => {
   const productos = await ProductosController.getAll();
   res.json({
@@ -24,7 +39,7 @@ router.get('/:id', async (req, res) => {
   });
 });
 
-router.post('/', async (req, res) => {
+router.post('/', authMiddleware, async (req, res) => {
   const { title, description, thumbnail, price, stock } = req.body;
   console.log(req.body);
 
@@ -48,7 +63,7 @@ router.post('/', async (req, res) => {
   });
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id',authMiddleware, async (req, res) => {
   const { title, description, thumbnail, price, stock } = req.body;
   const { id } = req.params;
 
@@ -80,7 +95,7 @@ router.put('/:id', async (req, res) => {
   });
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', authMiddleware, async (req, res) => {
   const { id } = req.params; 
 
   await ProductosController.deleteById(id)
