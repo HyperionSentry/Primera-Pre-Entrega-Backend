@@ -40,20 +40,18 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', authMiddleware, async (req, res) => {
-  const { title, description, thumbnail, price, stock } = req.body;
+  const { title, price, thumbnail } = req.body;
   console.log(req.body);
 
-  if (!title || !description || !thumbnail || !price || !stock)
+  if (!title || !thumbnail || !price )
     return res.status(400).json({
       msg: 'Faltan datos requeridos',
     });
 
   const nuevoProducto = {
     title,
-    description,
     thumbnail,
     price,
-    stock,
   };
   
   await ProductosController.save(nuevoProducto);
@@ -64,7 +62,7 @@ router.post('/', authMiddleware, async (req, res) => {
 });
 
 router.put('/:id',authMiddleware, async (req, res) => {
-  const { title, description, thumbnail, price, stock } = req.body;
+  const { title, thumbnail, price } = req.body;
   const { id } = req.params;
 
   const producto = await ProductosController.getById(id);
@@ -75,17 +73,15 @@ router.put('/:id',authMiddleware, async (req, res) => {
     });
 
 
-  if (!title || !description || !thumbnail || !price || !stock)
+  if (!title  || !thumbnail || !price)
     return res.status(400).json({
       msg: 'Faltan datos requeridos',
     });
 
   const nuevoProducto = {
     title,
-    description,
     thumbnail,
     price,
-    stock,
   };
   
   const result = await ProductosController.update(id, nuevoProducto)

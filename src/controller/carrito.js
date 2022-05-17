@@ -1,60 +1,60 @@
-const fs = require('fs');
+/* const fs = require('fs');
 const { v4: uuidv4 } = require('uuid');
 
 class Carrito {
-    constructor(nombreArchivo) {
-        this.archivo = nombreArchivo;
-      }
+  constructor(nombreArchivo) {
+    this.archivo = nombreArchivo;
+  }
 
-      async getData() {
-        const data = await fs.promises.readFile(this.archivo, 'utf-8');
-        return JSON.parse(data);
-      }
+  async getData() {
+    const data = await fs.promises.readFile(this.archivo, 'utf-8');
+    return JSON.parse(data);
+  }
 
-      async saveData(data) {
-        await fs.promises.writeFile(this.archivo, JSON.stringify(data, null, '\t'));
-      }
+  async saveData(data) {
+    await fs.promises.writeFile(this.archivo, JSON.stringify(data, null, '\t'));
+  }
 
-      async save(miObjeto) {
-    
-        await this.saveData(productos);
-      }
+  async save(miObjeto) {
 
-      async addToCart(productToAdd) {
-        const cart = await this.getData();
-        const cartProducts = cart.productos
-    
-        cartProducts.push(productToAdd) 
-        cart.productos = cartProducts;
+    await this.saveData(productos);
+  }
 
-        await this.saveData(cart);
-      }
+  async addToCart(productToAdd) {
+    const cart = await this.getData();
+    const cartProducts = cart.productos
 
+    cartProducts.push(productToAdd) 
+    cart.productos = cartProducts;
 
-      async newCart(miObjeto) {
-
-        const nuevoCarrito ={
-        id: uuidv4(),
-        timestamp: Date.now(),
-        productos: [],
-        }
-
-        await this.saveData(nuevoCarrito);
-
-        return nuevoCarrito.id
-      }
+    await this.saveData(cart);
+  }
 
 
-    async listProduct(id) {
-      const carrito = await this.getData();
-      
-      if (id !== carrito.id) {
-        return false;
-      } else {
-        const cartProducts = carrito.productos
-        return cartProducts;
-      }
+  async newCart(miObjeto) {
+
+    const nuevoCarrito ={
+    id: uuidv4(),
+    timestamp: Date.now(),
+    productos: [],
     }
+
+    await this.saveData(nuevoCarrito);
+
+    return nuevoCarrito.id
+  }
+
+
+  async listProduct(id) {
+    const carrito = await this.getData();
+    
+    if (id !== carrito.id) {
+      return false;
+    } else {
+      const cartProducts = carrito.productos
+      return cartProducts;
+    }
+  }
 
 
   async deleteCart(id) {
@@ -94,4 +94,4 @@ const CarritoController = new Carrito('carrito.json');
 
 module.exports = {
     CarritoController: CarritoController,
-  };
+  }; */
